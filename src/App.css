@@ -1,42 +1,213 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(4, 4, 75);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0 4%;
+}
+.heading {
   text-align: center;
+  letter-spacing: 0.7rem;
+  margin: 5% 0 0 0;
+  font-size: 2.8rem;
+  text-shadow: 4px 4px 4px steelblue;
+}
+.tagname {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: rgb(213, 210, 210);
+  text-shadow: 4px 4px 4px black;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  margin: 5% 1%;
+  width: 35%;
+  font-size: 1rem;
+  padding: 1%;
+  border-radius: 0.4rem;
+  border: none;
+}
+.btn {
+  padding: 0.5% 0.8%;
+  border-radius: 0.5rem;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  color: white;
+  transition: 0.3s;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(4, 4, 75);
+}
+.user-information {
+  display: flex;
+  justify-content: center;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 0 3%;
+}
+.user-info p {
+  margin-bottom: 1%;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+.info {
+  color: rgb(211, 209, 209);
+  font-weight: normal;
+}
+.img {
+  width: 200px;
+  border-radius: 50%;
+}
+.link {
+  color: rgb(211, 209, 209);
+}
+.link:hover {
+  color: rgb(168, 167, 167);
+}
+.lists-container {
+  display: flex;
+  justify-content: center;
+}
+.lists {
+  display: flex;
+  flex-direction: column;
+  margin: 4%;
+}
+.lists p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+  letter-spacing: 0.1rem;
+}
+.lists ul {
+  display: flex;
+  flex-direction: column;
+}
+.lists li {
+  color: rgb(211, 209, 209);
+}
+.lists a {
+  color: rgb(211, 209, 209);
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+.lists a:hover {
+  color: rgb(168, 167, 167);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 2.3rem;
+    letter-spacing: 0.4rem;
   }
-  to {
-    transform: rotate(360deg);
+  .tagname {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .input {
+    padding: 1% 2%;
+    width: 70%;
+    font-size: 0.9rem;
+  }
+  .user-info p {
+    letter-spacing: 0.01rem;
+  }
+  .img {
+    width: 150px;
+  }
+  .info {
+    font-size: 0.95rem;
+  }
+  .lists-container {
+    padding: 5% 20%;
+  }
+  .lists p {
+    font-size: 1rem;
+  }
+  .lists ol {
+    padding: 0 5%;
+  }
+  .lists li {
+    font-size: 0.7rem;
+  }
+  .lists a {
+    font-size: 0.7rem;
+    letter-spacing: 0.07rem;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+    letter-spacing: 0.01rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .tagname {
+    font-size: 0.75rem;
+    margin: 1% 0 10% 0;
+    letter-spacing: 0.01rem;
+  }
+  .input {
+    width: 80%;
+    padding: 2%;
+    font-size: 0.8rem;
+    margin: 0 5%;
+  }
+  .btn {
+    padding: 0.8% 1.4%;
+  }
+  .user-information {
+    flex-direction: column;
+  }
+  .img {
+    width: 150px;
+    margin: 5% auto;
+  }
+  .user-info p {
+    letter-spacing: 0.01rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .info {
+    font-size: 0.8rem;
+  }
+  .link {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .lists-container {
+    flex-direction: column;
+    padding: 0;
+    margin: auto;
+  }
+  .lists {
+    margin: 8% auto;
+    text-align: center;
+  }
+  .lists p {
+    font-size: 0.9rem;
+  }
+  .lists li {
+    list-style: none;
+  }
+  .lists a {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+  }
+  .foot {
+    left: 25%;
+    font-size: 0.8rem;
+  }
 }
