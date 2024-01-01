@@ -11,7 +11,7 @@ export default function App() {
   const [followings, setFollowings] = useState(null)
 
   const baseURL = "https://api.github.com/users/";
-  const token = "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";
+  const token = "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";
 
   async function fetchData(url, setState) {
     try {
